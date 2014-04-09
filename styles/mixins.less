@@ -1,0 +1,55 @@
+.shadow(@s) {
+	box-shadow: 		@s;
+	-webkit-box-shadow: @s;
+	-moz-box-shadow: 	@s;
+	-o-box-shadow: 		@s;
+	-ms-box-shadow: 	@s;
+} .radius(@s) {
+	border-radius: 			@s;
+	-webkit-border-radius: 	@s;
+	-moz-border-radius:		@s;
+	-o-border-radius: 		@s;
+	-ms-border-radius: 		@s;
+} .transition(@s) {
+	transition: 		@s;
+	-webkit-transition: @s;
+	-moz-transition: 	@s;
+	-o-transition: 		@s;
+	-ms-transition: 	@s;
+} .transform(@specs) {
+	transform: @specs;
+	-webkit-transform: @specs;
+	-moz-transform: @specs;
+	-ms-transform: @specs;
+	-o-transform: @specs;
+} .gradient(@style) {
+	background-image: linear-gradient(@style);
+	background-image: -webkit-linear-gradient(@style);
+	background-image: -moz-linear-gradient(@style);
+	background-image: -o-linear-gradient(@style);
+	background-image: -ms-linear-gradient(@style);
+} .box-sizing {
+	box-sizing:			border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: 	border-box;
+	-o-box-sizing: 		border-box;
+	-ms-box-sizing: 	border-box;
+} .animate(@name, @duration, @slide, @delay) {
+	animation: 			@name @duration @slide @delay;
+	-webkit-animation: 	@name @duration @slide @delay;
+	-moz-animation:	 	@name @duration @slide @delay;
+	-o-animation: 		@name @duration @slide @delay;
+	-ms-animation: 		@name @duration @slide @delay;
+} .background-size(@s) {
+	-webkit-background-size: @s;
+    -moz-background-size: @s;
+    background-size: @s;
+} .fonts(@name, @file, @style, @weight) {
+	font-family: @name;
+	src: url('fonts/@{file}.eot');
+	src: url('fonts/@{file}.eot?#iefix') 	format('embedded-opentype'),
+		 url('fonts/@{file}.woff') 	format('woff'),
+		 url('fonts/@{file}.ttf') 	format('truetype');
+	font-weight: @weight;
+	font-style: @style;
+}
