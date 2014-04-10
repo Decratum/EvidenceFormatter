@@ -23,10 +23,10 @@ $("document").ready(function() {
 		});
 	};
 
-	$("input, textarea").blur(function() {
-		$().getData();
+	$(window).unload(function() {
+	 	$().getData();
 		localStorage.setItem('cite', JSON.stringify(cite));
-	});
+	}); 
 
 	$("button#clearf").click(function() {
 		$("div#formatter :input").val("");
