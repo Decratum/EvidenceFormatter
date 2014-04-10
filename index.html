@@ -1,0 +1,81 @@
+<!DOCTYPE>
+
+<html>
+
+	<head>
+
+		<title>Evidence Formatter</title>
+
+		<link href="/assets/css/main.min.css" rel="stylesheet" type="text/css" />
+		<script src="/assets/js/jquery.js"></script>
+		<script src="/assets/js/main.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<h1>Evidence Formatter</h1>
+		<h2 class="subtitle">A product of <a href="http://decratum.com/">Decratum Debate Publications</a></h2>
+
+		<div id="formatter">
+		
+			<input type="text" id="tag" value="" class="data" placeholder="Tagline" />
+			
+			<br />
+
+			<h2>Citations</h2>
+
+			<div class="citations">
+
+				<label class="short" for="author">Author</label>
+				<input class="short data" type="text" id="author" value="bsgoi" />
+
+				<label class="long" for="authorc">Credentials</label>
+				<input class="long data" type="text" id="authorc" value="asd" />
+
+				<br />
+
+				<label class="short" for="pub">Publisher</label>
+				<input class="short data" type="text" id="pub" value="aasd" />
+
+				<label class="long" for="pubc">Credentials</label>
+				<input class="long data" type="text" id="pubc" value="" />
+
+				<br />
+
+				<label class="short" for="date">Date</label>
+				<input class="short data" type="text" id="date" value="" />
+				
+				<label class="long" for="url">URL</label>
+				<input class="long data" type="text" id="url" value="" />
+
+			</div>
+
+			<label for="quote"><h2>Quote</h2></label>
+			<textarea id="quote" class="data"></textarea>
+
+		</div>
+
+		<div class="format">
+			<input type="radio" name="format" id="decratum" value="decratum" checked="true" />
+			<input type="radio" name="format" id="bluebook" value="bluebook" />
+			<input type="radio" name="format" id="source" value="source" />
+			<input type="radio" name="format" id="cog" value="cog" />
+			<input type="radio" name="format" id="ethos" value="ethos" />
+		</div>
+
+			
+
+		<div style="text-align: right;">
+			<button id="clearf">Clear Citations</button>
+			<button id="clearc">Clear Evidence</button>
+			<button id="format">Format</button>
+		</div>
+
+		<div id="card"></div>
+
+
+
+	</body>
+
+</html>
