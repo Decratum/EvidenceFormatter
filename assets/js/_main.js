@@ -44,8 +44,8 @@ $("document").ready(function() {
 			case "decratum":
 				var card = '<b>'+cite['tag']+'</b><br />';
 				var card = card+'<i>';
-				var card = card+cite['author']+' <strike>('+cite['authorc']+')</strike> ';
-				var card = card+cite['pub']+' <strike>('+cite['pubc']+')</strike> ';
+				var card = card+cite['author']+' <del>('+cite['authorc']+')</del> ';
+				var card = card+cite['pub']+' <del>('+cite['pubc']+')</del> ';
 				var card = card+cite['date'];
 				var card = card+'<br />';
 				var card = card+'<u><a href="'+cite['url']+'">'+cite['url']+'</a></u>';
