@@ -48,7 +48,7 @@ $("document").ready(function() {
 				var card = '<b>'+print['tag']+'</b><br />';
 				var card = card+'<i>';
 				var card = card+print['author']+' <del>('+print['authorc']+')</del> ';
-				var card = card+print['pub']+' <del>('+print['pubc']+')</del> ';
+				var card = card+print['pub']+' <del>('+print['pubc']+')</del><br />';
 				var card = card+print['date'];
 				var card = card+'<br />';
 				var card = card+'<u>'+print['url']+'</u>';
