@@ -1,6 +1,9 @@
 @import "mixins";
 
-* { .box-sizing }
+* {
+	.box-sizing;
+	-webkit-text-size-adjust: 100%
+}
 
 body {
 	max-width: 800px;
@@ -8,7 +11,7 @@ body {
 	background-image: url("../img/bg.jpg");
 }
 
-h1, h2, h {
+h1, h2 {
 	font-family: Baskerville;
 	font-weight: 300;
 	color: #333;
@@ -22,7 +25,6 @@ h1 {
 	padding: 5px 0;
 	border-top: 1px solid #444;
 	border-bottom: 1px solid #444;
-
 }
 
 h2 {
@@ -43,8 +45,6 @@ h2 {
 	}
 }
 
-
-
 .placeholder(black);
 
 .clearfix {
@@ -62,16 +62,12 @@ h2 {
 
 button a {
 	color: black;
-	text-decoration: none;
+	text-decoration: none
 }
 
-label {
-	font: 14px "Courier New";
-}
+label { font: 14px "Courier New" }
 
-input, button {
-	font-family: "Liberation Serif", "Times";
-}
+input, button, select { font-family: "Liberation Serif", "Times" }
 
 input[type="text"], input[type="email"], textarea {
 	width: 100%;
@@ -81,26 +77,22 @@ input[type="text"], input[type="email"], textarea {
 	border: 1px solid RGB(150, 150, 150);
 	border-width: 0 0 1px 0;
 	padding: 5px 0;
+	border-radius: 0;
 
-	&:focus {
-		outline: 0;
-	}
+	&:focus { outline: 0 }
 }
 
-textarea {
-	height: 100px;
-}
+textarea { height: 100px }
 
 button {
 	border: 1px solid rgb(150, 150, 150);
 	.radius(1px);
-	.gradient(e("-90deg, #FCFCFC 50%, #F9F9F9 35%, #F5F5F5 15%"))
+	.gradient(e("-90deg, #FCFCFC 50%, #F9F9F9 35%, #F5F5F5 15%"));
+	cursor: pointer
 }
 
 
-input#tag {
-	font-size: 20px;
-}
+input#tag { font-size: 20px }
 
 
 .citations {
@@ -109,13 +101,10 @@ input#tag {
 	label {
 		display: inline-block;
 
-		&.short {
-			width: 10%;
-		}
-
+		&.short { width: 10% }
 		&.long {
 			width: 13%;
-			padding-left: 1%;
+			padding-left: 1%
 		}
 	}
 
@@ -124,36 +113,36 @@ input#tag {
 		padding: 2px 5px;
 		font-size: 14px;
 		margin-bottom: 5px;
-
 		.box-sizing;
+		
+		&.short { width: 23% }
+		&.long {
+			width: 52%;
+			float: right
+		}
 	}
-
-	input.short {
-		width: 23%;
-	}
-
-	input.long {
-		width: 52%;
-		float: right;
-	}
-
 }
-
-
 
 .format {
 	text-align: center;
 	position: relative;
 
-	&:hover>input::after:checked {
+	.select {
 		display: none;
+		width: 100%;
+		select {
+			width: 100%;
+			margin: 20px 0;
+			text-align: center;
+			font-size: 16px
+		}
 	}
+
+	&:hover>input::after:checked { display: none }
 
 	input {
 
-		&:hover::after, &:not(:checked):hover::after {
-			display: block;
-		}
+		&:hover::after, &:not(:checked):hover::after { display: block }
 
 		&::after {
 			content: '';
@@ -163,42 +152,29 @@ input#tag {
 			left: 50%;
 			margin-left: -35px;
 			bottom: -15px;
-			display: none;
+			display: none
 		}
 
-		&#decratum::after {
-			content: 'decratum';
-		}
-
-		&#bluebook::after {
-			content: 'bluebook';
-		}
-
-		&#source::after {
-			content: 'the source';
-		}
-
-		&#cog::after {
-			content: 'cog';
-		}
-
-		&#ethos::after {
-			content: 'ethos';
-		}
+		&#decratum:after { content: 'decratum' }
+		&#bluebook:after { content: 'bluebook' }
+		&#source:after { content: 'the source' }
+		&#cog:after { content: 'cog' }
+		&#ethos:after { content: 'ethos' }
 	}
-
 }
+
+.right button { float: right }
 
 span:focus {
 	outline: 0;
-	border-bottom: 1px dotted #333;
+	border-bottom: 1px dotted #333
 }
 
-span.source {
-	background-color: #CCC;
-}
+span.source { background-color: #CCC }
 
 #cards {
 	margin-top: 15px;
-	margin-bottom: 50px;
+	margin-bottom: 50px
 }
+
+@import url("respond.less");

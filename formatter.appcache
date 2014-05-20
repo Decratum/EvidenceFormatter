@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+/assets/css/main.min.css
+/assets/img/bg.jpg
+/assets/js/main.min.js
+/index.html
+
+FALLBACK:
+/ /index.html

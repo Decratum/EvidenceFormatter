@@ -1,6 +1,5 @@
 $("document").ready(function() {
 	
-	
 	existing = localStorage.getItem('cite');
 	if(existing) {
 		existing = JSON.parse(existing);
@@ -13,6 +12,7 @@ $("document").ready(function() {
 		str.replace(" and ", " &amp; ");
 		return str;
 	};
+
 	
 	$.fn.getData = function() {
 		cite = new Object();
@@ -145,7 +145,7 @@ $("document").ready(function() {
 		
 	});
 
-	$("input[name='format']").click(function() {
+	$("[name='format']").change(function() {
 		var format = $(this).val();
 		localStorage.setItem('format', JSON.stringify(format));
 		$().printExisting();
